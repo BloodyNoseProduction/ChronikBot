@@ -12,7 +12,9 @@ import dhook
 from dhook import Webhook
 import aiohttp
 import discord
-import steem
+from pprint import pprint
+import beem
+
 
 from discord.ext import commands
 from discord.ext.commands import Bot
@@ -51,10 +53,9 @@ async def on_message(message):
         await client.send_message(message.channel, ':ping_pong: PONG')
     elif message.content.startswith('!!post'):
         await client.send_message(message.channel, 'COMING SOON')
-
         embed = Webhook(url, color=123123)
 
-        embed.set_author(name="", icon="")
+        embed.set_author(name='', icon="")
         embed.set_desc('')
         embed.add_field(name='', value='123')
         embed.set_thumbnail('')
