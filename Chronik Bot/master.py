@@ -8,10 +8,12 @@ import random
 import sys
 import weakref
 from email.utils import parsedate_to_datetime
-
+import dhook
+from dhook import Webhook
 import aiohttp
 import discord
-from discord.object import webhooks
+import steem
+
 from discord.ext import commands
 from discord.ext.commands import Bot
 
@@ -20,6 +22,7 @@ logging.basicConfig(level=logging.INFO)
 
 
 client = discord.Client()
+url = 'WEBHOOK_URL'
 
 @client.event #on load
 async def on_ready():
@@ -47,14 +50,19 @@ async def on_message(message):
     elif message.content.startswith('!!ping'):
         await client.send_message(message.channel, ':ping_pong: PONG')
     elif message.content.startswith('!!post'):
-        async with aiohttp.ClientSession() as session:
-            webhook = Webhook.from_url('http://feeds.feedburner.com/feedburner/2toe', adapter=AsyncWebhookAdapter(session))
-            await webhook.send('RSS' , username='Foo')
-            await client.send_message(message.channel, 'COMING SOON')
-        embed = discord.Embed(title="", description="", color=0x00ff00)
-        embed.add_field(name="New Post", value="https://steemit.com/chronikncoffee/@chronik-n-coffee/new-brew-tonight-with-chronikncoffee-live-on-msp-waves-radio", inline=False)
-        embed.set_thumbnail(url="https://steemitimages.com/DQmQqDJGKB1Pr7KipQgs4quBU5WRRpUpa7HsNWQWeXpRFY1/CNC.jpg")
-        await client.send_message(message.channel, embed=embed)
+        await client.send_message(message.channel, 'COMING SOON')
+
+        embed = Webhook(url, color=123123)
+
+        embed.set_author(name="", icon="")
+        embed.set_desc('')
+        embed.add_field(name='', value='123')
+        embed.set_thumbnail('')
+        embed.set_image('')
+        embed.set_footer(text='https://steemit.com/chronikncoffee/@chronik-n-coffee/new-brew-tonight-with-chronikncoffee-live-on-msp-waves-radio', icon='', ts=True)
+        embed.post()
+
+
 
 
     elif message.content.startswith('!!clear'):
