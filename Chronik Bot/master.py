@@ -13,7 +13,8 @@ from dhook import Webhook
 import aiohttp
 import discord
 from pprint import pprint
-import beem
+from scrape import steemPost
+
 
 
 from discord.ext import commands
@@ -24,7 +25,7 @@ logging.basicConfig(level=logging.INFO)
 
 
 client = discord.Client()
-url = 'WEBHOOK_URL'
+url = 'https://steemit.com/@chronik-n-coffee'
 
 @client.event #on load
 async def on_ready():
@@ -34,12 +35,6 @@ async def on_ready():
     print('__________')
 
 #webhooks
-
-#async def foo():
-    #async with aiohttp.ClientSession() as session:
-        #webhook = Webhook.from_url('http://feeds.feedburner.com/feedburner/2toe', adapter=AsyncWebhookAdapter(session))
-        #await webhook.send('RSS' , username='Foo')
-
 
 #webhook end
 
@@ -53,15 +48,12 @@ async def on_message(message):
         await client.send_message(message.channel, ':ping_pong: PONG')
     elif message.content.startswith('!!post'):
         await client.send_message(message.channel, 'COMING SOON')
-        embed = Webhook(url, color=123123)
-
-        embed.set_author(name='', icon="")
-        embed.set_desc('')
-        embed.add_field(name='', value='123')
-        embed.set_thumbnail('')
-        embed.set_image('')
-        embed.set_footer(text='https://steemit.com/chronikncoffee/@chronik-n-coffee/new-brew-tonight-with-chronikncoffee-live-on-msp-waves-radio', icon='', ts=True)
-        embed.post()
+        embed = discord.Embed(
+            title='Test',
+            color='white',
+            description=''
+        )
+        await client.send_message(message.channel, embed=embed)
 
 
 
