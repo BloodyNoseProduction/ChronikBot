@@ -5,29 +5,52 @@ import discord
 import logging
 
 
-def steemPost():
+url = "https://steemit.com/@chronik-n-coffee"
+r = requests.get(url)
+soup = bs(r.content, "html.parser")
+#aFile = open('postList.txt', 'a')
+#cFile = open('postList.txt', 'w')
 
-    cFile = open('postList.txt', 'w')
-    aFile = open('postList.txt', 'a')
-    url = "https://steemit.com/@chronik-n-coffee"
-    r = requests.get(url)
-    soup = bs(r.content, "html.parser")
+
+def steemPostTitle():
 
     p_title = soup.find("div", {"class": "articles__summary"})
-    p_image = soup.find("div", {"class": "articles__content-block--img"})
+
     p_author = soup.find("div", {"class": "author"})
 
     for container in p_title:
-        i_title = container.contents[1].text
+        i_title = container.contents[0].text
         head, sep, tail = i_title.partition('$')
         print(head)
-        aFile.write('\n')
-        aFile.write(str(i_title))
+        #aFile.write('\n')
+        #aFile.write(str(i_title))
+        return head
+
+
+def steemPostImg():
+
+    p_image = soup.find("div", {"class": "articles__content-block--img"})
+
     for item in p_image:
         i_image = item.contents[0].find_all("img")[0].get('srcset')
-        s_image = i_image
-        print(s_image)
-        aFile.write('\n')
-        aFile.write(str(i_image))
+        ihead, isep, itail = i_image.partition('/h')
+        print(isep.strip('/') + itail)
+        sPi = isep.strip('/') + itail
+        #aFile.write('\n')
+        #aFile.write(str(isep.strip('/') + itail))
+        return sPi
 
-steemPost()
+def steemPostDesc():
+
+    p_desc = soup.find("div", {"class": "articles__content-block articles__content-block--text"})
+
+    for container in p_desc:
+
+        i_desc = container.contents[0].text
+        head,sep,tail = i_desc.partition("a\U00002026")
+        sPd = head.strip("\U00002026") + "\n"
+
+        print(sPd)
+        #print(sep)
+        #print(tail)
+        return sPd
