@@ -31,3 +31,4 @@ for item in p_image:
     print(s_image)
     aFile.write('\n')
     aFile.write(str(i_image))
+
