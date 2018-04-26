@@ -59,4 +59,4 @@ async def on_member_join(member):
     server = member.server
     fmt = 'Welcome {0.mention} to {1.name}!'
     await bot.send_message(server, fmt.format(member, server))
-bot.run("NDMxMTkyODE2NDcxNzY5MTI4.Dbpjzg.3IB29fwPLzDHTAqaZy9330_Hq8o")
+bot.run("YOUR_TOKEN")
