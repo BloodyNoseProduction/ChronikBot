@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f6431585-d984-4ae5-b5f7-178c5a028929" name="Default" comment="Push Scrape.py to repo">
+    <list default="true" id="f6431585-d984-4ae5-b5f7-178c5a028929" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Chronik Bot/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Chronik Bot/master.py" beforeDir="false" afterPath="$PROJECT_DIR$/Chronik Bot/master.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chronik Bot/postList.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Chronik Bot/postList.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chronik Bot/scrape.py" beforeDir="false" afterPath="$PROJECT_DIR$/Chronik Bot/scrape.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,14 +15,14 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/ChronikBot$scrape.coverage" NAME="scrape Coverage Results" MODIFIED="1524695430168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Chronik Bot" />
-    <SUITE FILE_PATH="coverage/ChronikBot$master.coverage" NAME="master Coverage Results" MODIFIED="1524695573396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Chronik Bot" />
+    <SUITE FILE_PATH="coverage/ChronikBot$master.coverage" NAME="master Coverage Results" MODIFIED="1524705253478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Chronik Bot" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="scrape.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="scrape.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Chronik Bot/scrape.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
+            <state relative-caret-position="576">
               <caret line="55" column="18" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -35,20 +34,29 @@
       <file leaf-file-name="master.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Chronik Bot/master.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+            <state relative-caret-position="442">
+              <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
               <folding>
-                <element signature="e#26#40#0" expanded="true" />
+                <element signature="e#26#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Old dump.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Chronik Bot/Old dump.py">
+      <file leaf-file-name="dump" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Chronik Bot/dump">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="42" column="39" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="39" />
+            <state relative-caret-position="374">
+              <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Chronik Bot/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="24" selection-start-column="24" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -81,8 +89,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Chronik Bot/Old dump.py" />
-        <option value="$PROJECT_DIR$/Chronik Bot/master.py" />
         <option value="$PROJECT_DIR$/Chronik Bot/scrape.py" />
+        <option value="$PROJECT_DIR$/Chronik Bot/dump" />
+        <option value="$PROJECT_DIR$/Chronik Bot/master.py" />
+        <option value="$PROJECT_DIR$/Chronik Bot/config.py" />
       </list>
     </option>
   </component>
@@ -105,7 +115,35 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ChronikBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChronikBot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChronikBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="ChronikBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="ChronikBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; Python 3.6 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -194,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524616431044</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Push Scrape.py fix and add steemPostDesc function&#10;&#10;Work on embed new post function for discord bot&#10;&#10;code clean up">
+      <created>1524695732702</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1524695732702</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -202,13 +247,13 @@
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005208" side_tool="true" weight="0.39959225" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005208" side_tool="true" weight="0.32925585" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32925585" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49947917" visible="true" weight="0.32925585" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -232,7 +277,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Push Scrape.py to repo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Push Scrape.py to repo" />
+    <MESSAGE value="Push Scrape.py fix and add steemPostDesc function&#10;&#10;Work on embed new post function for discord bot&#10;&#10;code clean up" />
+    <option name="LAST_COMMIT_MESSAGE" value="Push Scrape.py fix and add steemPostDesc function&#10;&#10;Work on embed new post function for discord bot&#10;&#10;code clean up" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -251,6 +297,40 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Chronik Bot/scrape.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="55" column="18" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chronik Bot/dump">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chronik Bot/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chronik Bot/master.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding>
+            <element signature="e#26#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Chronik Bot/scrape.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -273,7 +353,7 @@
         <state relative-caret-position="476">
           <caret line="48" column="75" lean-forward="true" selection-start-line="48" selection-start-column="75" selection-end-line="48" selection-end-column="75" />
           <folding>
-            <element signature="e#26#40#0" expanded="true" />
+            <element signature="e#26#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -293,7 +373,7 @@
         <state relative-caret-position="391">
           <caret line="42" column="14" lean-forward="true" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
           <folding>
-            <element signature="e#26#40#0" expanded="true" />
+            <element signature="e#26#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -313,7 +393,7 @@
         <state relative-caret-position="527">
           <caret line="50" column="31" lean-forward="true" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
           <folding>
-            <element signature="e#26#40#0" expanded="true" />
+            <element signature="e#26#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -333,7 +413,7 @@
         <state relative-caret-position="493">
           <caret line="48" column="46" lean-forward="true" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
           <folding>
-            <element signature="e#26#40#0" expanded="true" />
+            <element signature="e#26#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -372,23 +452,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Chronik Bot/master.py">
+    <entry file="file://$PROJECT_DIR$/Chronik Bot/dump">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
-          <folding>
-            <element signature="e#26#40#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="374">
+          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Chronik Bot/scrape.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
+        <state relative-caret-position="576">
           <caret line="55" column="18" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chronik Bot/master.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
+          <folding>
+            <element signature="e#26#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chronik Bot/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="24" selection-start-column="24" selection-end-column="24" />
         </state>
       </provider>
     </entry>

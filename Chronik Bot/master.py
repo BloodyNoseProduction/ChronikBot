@@ -1,32 +1,15 @@
 #Chronik Bot by 2toetommy
-import asyncio
-import datetime
-import json
+import config
 import logging
-import os
-import random
-import sys
-import weakref
-from email.utils import parsedate_to_datetime
-import dhook
-from dhook import Webhook
-import aiohttp
 import discord
-from discord.ext import commands
-from pprint import pprint
 import scrape
-
-
-
 from discord.ext import commands
-from discord.ext.commands import Bot
+
 
 #Logs errors if any then prints
-
-description = 'Chronik Bot by 2toetommy'
 logging.basicConfig(level=logging.INFO)
 
-
+description = 'Chronik Bot by 2toetommy'
 bot = commands.Bot(command_prefix='!!', description=description)
 url = 'https://steemit.com/@chronik-n-coffee'
 
@@ -35,28 +18,45 @@ async def on_ready():
     print('Logged in as ')
     print(bot.user.name)
     print(bot.user.id)
-    print('__________')
+    print(f'discord.py v{discord.__version__}')
 
+
+
+
+@bot.command()
+async def load(ctx, extension_name : str):
+    """Loads an extension."""
+    try:
+        bot.load_extension(extension_name)
+    except (AttributeError, ImportError) as e:
+        await ctx.say("```py\n{}: {}\n```".format(type(e).__name__, str(e)))
+        return
+    await ctx.say("{} loaded.".format(extension_name))
+
+
+@bot.command()
+async def unload(ctx, extension_name : str):
+    """Unloads an extension."""
+    bot.unload_extension(extension_name)
+    await ctx.say("{} unloaded.".format(extension_name))
 
 #commands
 
 @bot.command()
-async def post():
-    await bot.say(scrape.steemPostTitle())
-
+async def post(ctx):
     embed = discord.Embed(title=scrape.steemPostTitle(), discription="ChronikBot Post", color=0x00ff00)
     embed.set_author(name="NEW POST")
     embed.set_image(url=scrape.steemPostImg())
     embed.add_field(name='___', value=scrape.steemPostDesc(), inline=False)
-    await bot.say(embed=embed)
+    ctx.send(embed=embed)
 
 
         
 
 
 @bot.event
-async def on_member_join(member):
+async def on_member_join(ctx, member):
     server = member.server
     fmt = 'Welcome {0.mention} to {1.name}!'
     await bot.send_message(server, fmt.format(member, server))
-bot.run("NDMxMTkyODE2NDcxNzY5MTI4.Dbpjzg.3IB29fwPLzDHTAqaZy9330_Hq8o")
+bot.run(config.token)
