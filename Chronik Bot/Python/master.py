@@ -44,19 +44,13 @@ async def unload(ctx, extension_name : str):
 
 @bot.command()
 async def post(ctx):
-    embed = discord.Embed(title=scrape.steemPostTitle(), discription="ChronikBot Post", color=0x00ff00)
-    embed.set_author(name="NEW POST")
+    embed = discord.Embed(title='NEW POST ALERT', discription="ChronikBot Post", color=0x00ff00)
+
+    embed.set_author(name="Chronik N Coffee")
+    embed.add_field(name='POST_LINK', value=None, inline=False)
     embed.set_image(url=scrape.steemPostImg())
-    embed.add_field(name='___', value=scrape.steemPostDesc(), inline=False)
-    ctx.send(embed=embed)
+    embed.set_footer(text=scrape.steemPostDesc())
+    await ctx.send(embed=embed)
 
 
-        
-
-
-@bot.event
-async def on_member_join(ctx, member):
-    server = member.server
-    fmt = 'Welcome {0.mention} to {1.name}!'
-    await bot.send_message(server, fmt.format(member, server))
 bot.run(config.token)

@@ -48,9 +48,20 @@ def steemPostDesc():
 
         i_desc = container.contents[0].text
         head,sep,tail = i_desc.partition("a\U00002026")
-        sPd = head.strip("\U00002026") + "\n"
+        sPd = head.strip("\U00002026") + "\n" + sep
 
         print(sPd)
         #print(sep)
         #print(tail)
         return sPd
+
+def steemPostLink():
+    p_desc = soup.find("div", {"class": "articles__content-block articles__content-block--text"})
+    for link in p_desc:
+        ilink = link.contents[0].get('href')
+        p_link = tuple(set(url) | set(ilink))
+        #print(link)
+        print('________')
+        print(p_link)
+
+steemPostLink()
